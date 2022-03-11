@@ -60,6 +60,7 @@ class ProfileForm(FlaskForm):
     image = FileField("Image") 
     submit = SubmitField('Post')
     role = SelectField('Role',choices=[("Teacher","Teacher"),("Student","Student")])
+    favcolor = StringField('Favoite Color', validators=[DataRequired()])
 
 class PostForm(FlaskForm):
     subject = StringField('Subject', validators=[DataRequired()])
